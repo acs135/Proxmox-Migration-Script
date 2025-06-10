@@ -56,4 +56,5 @@ done
 # Export and import linux VMs
 for vm in $(sed -n '/:Linux:/d;$p' inventory.txt); do
 	importvm $vm
+ 	qm set $nextid -vga vmware
 done
